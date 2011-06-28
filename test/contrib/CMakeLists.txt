@@ -15,27 +15,4 @@
 # Licensed under the GPL Version 3 license.
 # http://www.gnu.org/licenses/gpl.html 
 
-#### Project information ####
-set(VER_MAJOR "0")
-set(VER_MINOR "1")
-set(VER_PATCH "0")
-set(VERSION   "${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}")
-message(STATUS "Configuring StableMatching ${VERSION}")
-project(StableMatching)
-
-cmake_minimum_required(VERSION 2.6)
-
-#### Need boost and yaml-cpp ####
-set(CMAKE_MODULE_PATH ${StableMatching_SOURCE_DIR}/cmake)
-find_package(Boost COMPONENTS program_options REQUIRED)
-find_package(YamlCpp REQUIRED)
-
-#### So we can build outside of the main directory ####
-include_directories (${CMAKE_CURRENT_BINARY_DIRS})
-
-#### Begin building ####
-add_subdirectory(src)
-
-#### Build tests ####
-enable_testing()
-add_subdirectory(test)
+add_subdirectory(gtest)
