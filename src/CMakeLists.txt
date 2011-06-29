@@ -24,5 +24,5 @@ include_directories (
   ${YamlCpp_INCLUDE_DIRS}
 )
 
-add_executable(stable_matching main.cxx)
+add_executable(stable_matching main.cxx entity.cxx)
 target_link_libraries(stable_matching boost_program_options yaml-cpp)

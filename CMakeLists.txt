@@ -33,6 +33,9 @@ find_package(YamlCpp REQUIRED)
 #### So we can build outside of the main directory ####
 include_directories (${CMAKE_CURRENT_BINARY_DIRS})
 
+#### Set global CXX Flags for the project ####
+set(CMAKE_CXX_FLAGS "-std=c++0x")
+
 #### Begin building ####
 add_subdirectory(src)
 
